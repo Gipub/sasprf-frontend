@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership | SASPRF</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <img src="assets/logo.png" alt="SASPRF Logo" class="logo" />
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="journals.html">Journals</a></li>
+          <li><a href="membership.html" class="active">Membership</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Membership Plans</h1>
+      <p>Join SASPRF and become a part of a global research community.</p>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP TYPES -->
+  <section class="container" style="padding: 60px 20px;">
+    <h2>Available Membership Types</h2>
+    <ul style="margin-top: 20px; padding-left: 20px; line-height: 2;">
+      <li>👨‍🎓 <strong>Student Member</strong> (SM‑SASPRF)</li>
+      <li>🧑‍🔬 <strong>Fellow</strong> (F‑SASPRF)</li>
+      <li>🏅 <strong>Life Member</strong></li>
+      <li>🎖️ <strong>Dignitary Fellow</strong></li>
+      <li>👑 <strong>Royal Fellow</strong> (FR‑SASPRF)</li>
+    </ul>
+
+    <p style="margin-top: 20px;">
+      All members receive access to SASPRF activities, certificates, early journal submissions, and discounts on events.
+    </p>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section class="container" style="padding: 40px 20px; background-color: #f2f2f2;">
+    <h2>Apply for Membership</h2>
+    <form id="membershipForm" style="margin-top: 20px;">
+      <div style="margin-bottom: 15px;">
+        <label for="fullName">Full Name:</label><br />
+        <input type="text" id="fullName" name="fullName" required style="width: 100%; padding: 10px;"/>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;"/>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="membershipType">Membership Type:</label><br />
+        <select id="membershipType" name="membershipType" required style="width: 100%; padding: 10px;">
+          <option value="">--Select--</option>
+          <option>Student Member</option>
+          <option>Fellow</option>
+          <option>Life Member</option>
+          <option>Dignitary Fellow</option>
+          <option>Royal Fellow</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="upload">Upload ID Proof (PDF or JPG):</label><br />
+        <input type="file" id="upload" name="upload" accept=".pdf,.jpg,.jpeg,.png" style="width: 100%;" />
+      </div>
+
+      <button type="submit" class="btn">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/logo.png" alt="SASPRF Logo" class="footer-logo" />
+          <p>House No‑225, Barhawar, Murajhar, Hojai, Assam 782439, India</p>
+          <p>Email: <a href="mailto:office@gipublisher.com">office@gipublisher.com</a></p>
+          <p>Phone: <a href="tel:+919435179252">+91‑94351‑79252</a></p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <a href="#">🔵</a>
+          <a href="#">🔗</a>
+          <a href="#">▶️</a>
+        </div>
+      </div>
+      <p class="copyright">© 2025 SASPRF. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scrollTopBtn">↑</button>
+
+</body>
+</html>

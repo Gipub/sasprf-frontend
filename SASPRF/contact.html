@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | SASPRF</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <img src="assets/logo.png" alt="SASPRF Logo" class="logo" />
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="journals.html">Journals</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you — get in touch with SASPRF today.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO + FORM -->
+  <section class="container" style="padding: 60px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; flex-wrap: wrap;">
+    
+    <!-- Contact Details -->
+    <div>
+      <h2>Reach Us</h2>
+      <p><strong>Address:</strong><br>
+      House No‑225, Barhawar, Murajhar,<br>
+      Hojai, Assam 782439, India</p>
+
+      <p><strong>Email:</strong><br>
+      <a href="mailto:office@gipublisher.com">office@gipublisher.com</a></p>
+
+      <p><strong>Phone:</strong><br>
+      <a href="tel:+919435179252">+91‑94351‑79252</a></p>
+
+      <p><strong>Social Media:</strong><br>
+        🔵 Facebook<br>
+        🔗 LinkedIn<br>
+        ▶️ YouTube
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <div>
+      <h2>Send a Message</h2>
+      <form id="contactForm" style="margin-top: 20px;">
+        <div style="margin-bottom: 15px;">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required style="width: 100%; padding: 10px;"/>
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;"/>
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px;"></textarea>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- GOOGLE MAP -->
+  <section style="padding: 0; margin-top: 20px;">
+    <iframe
+      src="https://www.google.com/maps?q=Barhawar%20Murajhar%20Hojai%20Assam&output=embed"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/logo.png" alt="SASPRF Logo" class="footer-logo" />
+          <p>House No‑225, Barhawar, Murajhar, Hojai, Assam 782439, India</p>
+          <p>Email: <a href="mailto:office@gipublisher.com">office@gipublisher.com</a></p>
+          <p>Phone: <a href="tel:+919435179252">+91‑94351‑79252</a></p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <<div class="footer-social">
+  <h4>Connect With Us</h4>
+  <a href="https://facebook.com/" target="_blank" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://youtube.com/" target="_blank" title="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+
+      </div>
+      <p class="copyright">© 2025 SASPRF. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scrollTopBtn">↑</button>
+<script>
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      alert(result.message || "Submitted successfully!");
+      form.reset();
+    } catch (err) {
+      alert("❌ Submission failed. Please try again.");
+      console.error(err);
+    }
+  });
+</script>
+
+</body>
+</html>

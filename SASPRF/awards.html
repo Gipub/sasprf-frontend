@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awards | SASPRF</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <img src="assets/logo.png" alt="SASPRF Logo" class="logo" />
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="journals.html">Journals</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="awards.html" class="active">Awards</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Academic Awards</h1>
+      <p>Recognizing excellence in education, research, and service.</p>
+    </div>
+  </section>
+
+  <!-- AWARD TYPES -->
+  <section class="container" style="padding: 60px 20px;">
+    <h2>Types of Awards Offered</h2>
+    <ul style="margin-top: 20px; padding-left: 20px; line-height: 2;">
+      <li>🏅 <strong>Young Researcher Award</strong></li>
+      <li>🎓 <strong>Best Academic Contribution Award</strong></li>
+      <li>📘 <strong>Innovative Teaching Excellence Award</strong></li>
+      <li>🧪 <strong>Research Excellence Award</strong></li>
+      <li>🌍 <strong>Global Impact Fellowship</strong></li>
+    </ul>
+
+    <p style="margin-top: 20px;">
+      These awards are open to researchers, educators, and professionals contributing to scientific and academic progress.
+    </p>
+  </section>
+
+  <!-- AWARD FORM -->
+  <section class="container" style="padding: 40px 20px; background-color: #f2f2f2;">
+    <h2>Apply for an Award</h2>
+    <form id="awardForm" style="margin-top: 20px;">
+      <div style="margin-bottom: 15px;">
+        <label for="name">Full Name:</label><br />
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px;"/>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;"/>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="awardType">Select Award:</label><br />
+        <select id="awardType" name="awardType" required style="width: 100%; padding: 10px;">
+          <option value="">--Select Award--</option>
+          <option>Young Researcher Award</option>
+          <option>Best Academic Contribution Award</option>
+          <option>Innovative Teaching Excellence Award</option>
+          <option>Research Excellence Award</option>
+          <option>Global Impact Fellowship</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="upload">Upload Resume/CV (PDF):</label><br />
+        <input type="file" id="upload" name="upload" accept=".pdf" style="width: 100%;" />
+      </div>
+
+      <button type="submit" class="btn">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/logo.png" alt="SASPRF Logo" class="footer-logo" />
+          <p>House No‑225, Barhawar, Murajhar, Hojai, Assam 782439, India</p>
+          <p>Email: <a href="mailto:office@gipublisher.com">office@gipublisher.com</a></p>
+          <p>Phone: <a href="tel:+919435179252">+91‑94351‑79252</a></p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <<div class="footer-social">
+  <h4>Connect With Us</h4>
+  <a href="https://facebook.com/" target="_blank" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://youtube.com/" target="_blank" title="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+
+      </div>
+      <p class="copyright">© 2025 SASPRF. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scrollTopBtn">↑</button>
+
+</body>
+</html>
